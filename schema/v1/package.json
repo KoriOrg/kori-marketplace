@@ -121,11 +121,12 @@
       "type": "string"
     },
     "kind": {
-      "title": "Kind",
-      "type": "string",
       "enum": [
-        "binary"
-      ]
+        "binary",
+        "code"
+      ],
+      "title": "Kind",
+      "type": "string"
     },
     "artifacts": {
       "items": {

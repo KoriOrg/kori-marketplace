@@ -1,0 +1,21 @@
+{
+  "schema": "kori.package.v1",
+  "id": "kori.hello-world",
+  "name": "hello-world",
+  "description": "Simple hello world Python script.",
+  "version": "0.1.0",
+  "publisher": "kori",
+  "kind": "code",
+  "artifacts": [
+    {
+      "os": "any",
+      "arch": "any",
+      "url": "https://raw.githubusercontent.com/KoriOrg/kori-packages/main/scripts/hello_world.py",
+      "sha256": "b1834c2e63904318c6bfec3f574b74fb983df181ec3355592e0a7720b3f4a45e"
+    }
+  ],
+  "install": {
+    "target": "packages",
+    "name": "hello_world.py"
+  }
+}

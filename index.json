@@ -1,6 +1,6 @@
 {
   "schema": "kori.marketplace.index.v1",
-  "generated_at": "2026-08-26T12:30:02+00:00",
+  "generated_at": "2026-08-26T13:37:51+00:00",
   "trust": "packages/trust.json",
   "schemas": [
     {
@@ -31,6 +31,15 @@
     }
   ],
   "packages": [
+    {
+      "id": "kori.hello-world",
+      "name": "hello-world",
+      "description": "Simple hello world Python script.",
+      "publisher": "kori",
+      "latest": "0.1.0",
+      "manifest": "packages/kori/hello-world/0.1.0/package.json",
+      "runtime": "packages/kori/hello-world/0.1.0/runtime.json"
+    },
     {
       "id": "kori.uv",
       "name": "uv",

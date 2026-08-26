@@ -1,15 +1,59 @@
 {
   "$defs": {
+    "RuntimeDependency": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "version": {
+          "title": "Version",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "version"
+      ],
+      "title": "RuntimeDependency",
+      "type": "object"
+    },
+    "RuntimeEntrypoint": {
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": [
+            "installed",
+            "dependency"
+          ],
+          "title": "Kind",
+          "type": "string"
+        },
+        "id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Id"
+        }
+      },
+      "required": [
+        "kind"
+      ],
+      "title": "RuntimeEntrypoint",
+      "type": "object"
+    },
     "RuntimeExec": {
       "additionalProperties": false,
       "properties": {
         "entrypoint": {
-          "default": "installed",
-          "title": "Entrypoint",
-          "type": "string",
-          "enum": [
-            "installed"
-          ]
+          "$ref": "#/$defs/RuntimeEntrypoint"
         },
         "args": {
           "default": [],
@@ -40,6 +84,9 @@
           "title": "Working Directory"
         }
       },
+      "required": [
+        "entrypoint"
+      ],
       "title": "RuntimeExec",
       "type": "object"
     }
@@ -59,6 +106,14 @@
     "version": {
       "title": "Version",
       "type": "string"
+    },
+    "depends": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/RuntimeDependency"
+      },
+      "title": "Depends",
+      "type": "array"
     },
     "exec": {
       "$ref": "#/$defs/RuntimeExec"

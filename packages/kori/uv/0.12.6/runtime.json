@@ -2,8 +2,11 @@
   "schema": "kori.runtime.v1",
   "id": "kori.uv",
   "version": "0.12.6",
+  "depends": [],
   "exec": {
-    "entrypoint": "installed",
+    "entrypoint": {
+      "kind": "installed"
+    },
     "args": [],
     "env": {
       "UV_CACHE_DIR": "data/kori.uv/cache",

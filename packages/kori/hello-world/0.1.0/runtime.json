@@ -1,0 +1,23 @@
+{
+  "schema": "kori.runtime.v1",
+  "id": "kori.hello-world",
+  "version": "0.1.0",
+  "depends": [
+    {
+      "id": "kori.uv",
+      "version": "0.12.6"
+    }
+  ],
+  "exec": {
+    "entrypoint": {
+      "kind": "dependency",
+      "id": "kori.uv"
+    },
+    "args": [
+      "run",
+      "packages/kori.hello-world/0.1.0/hello_world.py"
+    ],
+    "env": {},
+    "working_directory": "data/kori.hello-world/work"
+  }
+}
