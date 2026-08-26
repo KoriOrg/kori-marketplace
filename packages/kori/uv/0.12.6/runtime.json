@@ -1,0 +1,19 @@
+{
+  "schema": "kori.runtime.v1",
+  "id": "kori.uv",
+  "version": "0.12.6",
+  "exec": {
+    "entrypoint": "installed",
+    "args": [],
+    "env": {
+      "UV_CACHE_DIR": "data/kori.uv/cache",
+      "UV_PYTHON_INSTALL_DIR": "data/kori.uv/python",
+      "UV_TOOL_DIR": "data/kori.uv/tools",
+      "UV_TOOL_BIN_DIR": "bin",
+      "XDG_CACHE_HOME": "data/kori.uv/xdg-cache",
+      "XDG_DATA_HOME": "data/kori.uv/xdg-data",
+      "XDG_CONFIG_HOME": "data/kori.uv/xdg-config"
+    },
+    "working_directory": "data/kori.uv/work"
+  }
+}

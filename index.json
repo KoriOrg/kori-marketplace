@@ -16,6 +16,10 @@
       "path": "schema/v1/publisher.json"
     },
     {
+      "id": "kori.runtime.v1",
+      "path": "schema/v1/runtime.json"
+    },
+    {
       "id": "kori.trust.v1",
       "path": "schema/v1/trust.json"
     }

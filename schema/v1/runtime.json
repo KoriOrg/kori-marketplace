@@ -1,0 +1,76 @@
+{
+  "$defs": {
+    "RuntimeExec": {
+      "additionalProperties": false,
+      "properties": {
+        "entrypoint": {
+          "default": "installed",
+          "title": "Entrypoint",
+          "type": "string",
+          "enum": [
+            "installed"
+          ]
+        },
+        "args": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Args",
+          "type": "array"
+        },
+        "env": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "default": {},
+          "title": "Env",
+          "type": "object"
+        },
+        "working_directory": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Working Directory"
+        }
+      },
+      "title": "RuntimeExec",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema": {
+      "const": "kori.runtime.v1",
+      "default": "kori.runtime.v1",
+      "title": "Schema",
+      "type": "string"
+    },
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "version": {
+      "title": "Version",
+      "type": "string"
+    },
+    "exec": {
+      "$ref": "#/$defs/RuntimeExec"
+    }
+  },
+  "required": [
+    "id",
+    "version",
+    "exec"
+  ],
+  "title": "RuntimeManifest",
+  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kkori.xyz/schema/v1/runtime.json"
+}
