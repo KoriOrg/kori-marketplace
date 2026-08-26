@@ -37,7 +37,8 @@
       "description": "Fast Python package and project manager.",
       "publisher": "kori",
       "latest": "0.12.6",
-      "manifest": "packages/kori/uv/0.12.6/package.json"
+      "manifest": "packages/kori/uv/0.12.6/package.json",
+      "runtime": "packages/kori/uv/0.12.6/runtime.json"
     }
   ]
 }

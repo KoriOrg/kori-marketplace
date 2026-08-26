@@ -34,16 +34,18 @@ def discover_packages() -> list[dict]:
     packages = []
     for path in sorted(PACKAGES.glob("*/*/*/package.json")):
         manifest = load_json(path)
-        packages.append(
-            {
-                "id": manifest["id"],
-                "name": manifest["name"],
-                "description": manifest["description"],
-                "publisher": manifest["publisher"],
-                "latest": manifest["version"],
-                "manifest": relative(path),
-            }
-        )
+        package = {
+            "id": manifest["id"],
+            "name": manifest["name"],
+            "description": manifest["description"],
+            "publisher": manifest["publisher"],
+            "latest": manifest["version"],
+            "manifest": relative(path),
+        }
+        runtime_path = path.with_name("runtime.json")
+        if runtime_path.exists():
+            package["runtime"] = relative(runtime_path)
+        packages.append(package)
     return packages
 
 

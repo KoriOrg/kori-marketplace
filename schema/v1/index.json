@@ -27,6 +27,18 @@
         "manifest": {
           "title": "Manifest",
           "type": "string"
+        },
+        "runtime": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Runtime"
         }
       },
       "required": [

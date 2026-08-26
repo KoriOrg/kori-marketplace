@@ -16,6 +16,12 @@
       "version": "0.12.6",
       "path": "packages/kori/uv/0.12.6/package.json",
       "sha256": "5c729e29761fc38e7b0021855f365456860d81a37e11dd2e9cace84c5367598a"
+    },
+    {
+      "package": "kori.uv",
+      "version": "0.12.6",
+      "path": "packages/kori/uv/0.12.6/runtime.json",
+      "sha256": "c7d44a45653d859dce00112b72f34c0311ee293a0de36ffe6d58809f02c0145a"
     }
   ],
   "required_hashes": true
