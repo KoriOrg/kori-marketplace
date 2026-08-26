@@ -5,6 +5,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 PACKAGES = ROOT / "packages"
+SCHEMAS = ROOT / "schema"
 INDEX = ROOT / "index.json"
 
 
@@ -45,11 +46,25 @@ def discover_packages() -> list[dict]:
     return packages
 
 
+def discover_schemas() -> list[dict]:
+    schemas = []
+    for path in sorted(SCHEMAS.glob("**/*.json")):
+        schema = load_json(path)
+        schemas.append(
+            {
+                "id": schema["properties"]["schema"]["const"],
+                "path": relative(path),
+            }
+        )
+    return schemas
+
+
 def main() -> None:
     index = {
         "schema": "kori.marketplace.index.v1",
         "generated_at": datetime.now(UTC).replace(microsecond=0).isoformat(),
         "trust": "packages/trust.json",
+        "schemas": discover_schemas(),
         "publishers": discover_publishers(),
         "packages": discover_packages(),
     }

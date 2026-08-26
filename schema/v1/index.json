@@ -52,6 +52,25 @@
       ],
       "title": "PublisherIndexEntry",
       "type": "object"
+    },
+    "SchemaIndexEntry": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "path": {
+          "title": "Path",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "path"
+      ],
+      "title": "SchemaIndexEntry",
+      "type": "object"
     }
   },
   "additionalProperties": false,
@@ -71,6 +90,14 @@
       "default": "packages/trust.json",
       "title": "Trust",
       "type": "string"
+    },
+    "schemas": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/SchemaIndexEntry"
+      },
+      "title": "Schemas",
+      "type": "array"
     },
     "publishers": {
       "default": [],
