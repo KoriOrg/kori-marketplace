@@ -1,0 +1,21 @@
+{
+  "schema": "kori.package.v1",
+  "id": "kori.iso-clock",
+  "name": "iso-clock",
+  "description": "Python script that prints and parses an ISO timestamp.",
+  "version": "0.1.0",
+  "publisher": "kori",
+  "kind": "code",
+  "artifacts": [
+    {
+      "os": "any",
+      "arch": "any",
+      "url": "https://raw.githubusercontent.com/KoriOrg/kori-packages/main/scripts/iso_clock.py",
+      "sha256": "f769c13c095fdd7c6378fa62789e5a4dcb2e494b458ad05b306232402e200d45"
+    }
+  ],
+  "install": {
+    "target": "packages",
+    "name": "iso_clock.py"
+  }
+}

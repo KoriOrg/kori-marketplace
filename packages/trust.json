@@ -34,6 +34,18 @@
       "version": "0.1.0",
       "path": "packages/kori/hello-world/0.1.0/runtime.json",
       "sha256": "39836186e858c76fa5c26e8be9aa679c8d4dae5262bcd2e6bea7c4b787945d0e"
+    },
+    {
+      "package": "kori.iso-clock",
+      "version": "0.1.0",
+      "path": "packages/kori/iso-clock/0.1.0/package.json",
+      "sha256": "8a6a3dc236b5c59a33712ad242f12a84fbfe823de6661434fa9e8daaf3044b5b"
+    },
+    {
+      "package": "kori.iso-clock",
+      "version": "0.1.0",
+      "path": "packages/kori/iso-clock/0.1.0/runtime.json",
+      "sha256": "b7563d8b04353ebe51013ddfaa10f716efedd6e7b283f2eb671589d99115bf27"
     }
   ],
   "required_hashes": true

@@ -1,6 +1,6 @@
 {
   "schema": "kori.marketplace.index.v1",
-  "generated_at": "2026-08-26T13:37:51+00:00",
+  "generated_at": "2026-08-26T13:45:32+00:00",
   "trust": "packages/trust.json",
   "schemas": [
     {
@@ -39,6 +39,15 @@
       "latest": "0.1.0",
       "manifest": "packages/kori/hello-world/0.1.0/package.json",
       "runtime": "packages/kori/hello-world/0.1.0/runtime.json"
+    },
+    {
+      "id": "kori.iso-clock",
+      "name": "iso-clock",
+      "description": "Python script that prints and parses an ISO timestamp.",
+      "publisher": "kori",
+      "latest": "0.1.0",
+      "manifest": "packages/kori/iso-clock/0.1.0/package.json",
+      "runtime": "packages/kori/iso-clock/0.1.0/runtime.json"
     },
     {
       "id": "kori.uv",

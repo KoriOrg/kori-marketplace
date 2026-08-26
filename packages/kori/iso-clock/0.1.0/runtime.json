@@ -1,0 +1,23 @@
+{
+  "schema": "kori.runtime.v1",
+  "id": "kori.iso-clock",
+  "version": "0.1.0",
+  "depends": [
+    {
+      "id": "kori.uv",
+      "version": "0.12.6"
+    }
+  ],
+  "exec": {
+    "entrypoint": {
+      "kind": "dependency",
+      "id": "kori.uv"
+    },
+    "args": [
+      "run",
+      "packages/kori.iso-clock/0.1.0/iso_clock.py"
+    ],
+    "env": {},
+    "working_directory": "data/kori.iso-clock/work"
+  }
+}
