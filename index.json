@@ -1,6 +1,6 @@
 {
   "schema": "kori.marketplace.index.v1",
-  "generated_at": "2026-08-26T11:19:50+00:00",
+  "generated_at": "2026-08-26T11:43:13+00:00",
   "trust": "packages/trust.json",
   "schemas": [
     {
@@ -30,6 +30,7 @@
     {
       "id": "kori.uv",
       "name": "uv",
+      "description": "Fast Python package and project manager.",
       "publisher": "kori",
       "latest": "0.12.6",
       "manifest": "packages/kori/uv/0.12.6/package.json"

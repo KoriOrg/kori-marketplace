@@ -108,6 +108,11 @@
       "title": "Name",
       "type": "string"
     },
+    "description": {
+      "maxLength": 200,
+      "title": "Description",
+      "type": "string"
+    },
     "version": {
       "title": "Version",
       "type": "string"
@@ -134,6 +139,7 @@
   "required": [
     "id",
     "name",
+    "description",
     "version",
     "publisher",
     "kind",

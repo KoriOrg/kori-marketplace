@@ -38,6 +38,7 @@ def discover_packages() -> list[dict]:
             {
                 "id": manifest["id"],
                 "name": manifest["name"],
+                "description": manifest["description"],
                 "publisher": manifest["publisher"],
                 "latest": manifest["version"],
                 "manifest": relative(path),

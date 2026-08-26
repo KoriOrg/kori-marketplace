@@ -11,6 +11,11 @@
           "title": "Name",
           "type": "string"
         },
+        "description": {
+          "maxLength": 200,
+          "title": "Description",
+          "type": "string"
+        },
         "publisher": {
           "title": "Publisher",
           "type": "string"
@@ -27,6 +32,7 @@
       "required": [
         "id",
         "name",
+        "description",
         "publisher",
         "latest",
         "manifest"

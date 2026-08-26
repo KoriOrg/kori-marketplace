@@ -2,6 +2,7 @@
   "schema": "kori.package.v1",
   "id": "kori.uv",
   "name": "uv",
+  "description": "Fast Python package and project manager.",
   "version": "0.12.6",
   "publisher": "kori",
   "kind": "binary",
