@@ -122,7 +122,10 @@
     },
     "kind": {
       "title": "Kind",
-      "type": "string"
+      "type": "string",
+      "enum": [
+        "binary"
+      ]
     },
     "artifacts": {
       "items": {
