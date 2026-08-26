@@ -10,5 +10,13 @@
     }
   ],
   "app_verifications": [],
+  "manifest_hashes": [
+    {
+      "package": "kori.uv",
+      "version": "0.12.6",
+      "path": "packages/kori/uv/0.12.6/package.json",
+      "sha256": "5c729e29761fc38e7b0021855f365456860d81a37e11dd2e9cace84c5367598a"
+    }
+  ],
   "required_hashes": true
 }
