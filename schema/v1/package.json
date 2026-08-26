@@ -1,0 +1,147 @@
+{
+  "$defs": {
+    "PackageArtifact": {
+      "additionalProperties": false,
+      "properties": {
+        "os": {
+          "title": "Os",
+          "type": "string"
+        },
+        "arch": {
+          "title": "Arch",
+          "type": "string"
+        },
+        "url": {
+          "format": "uri",
+          "maxLength": 2083,
+          "minLength": 1,
+          "title": "Url",
+          "type": "string"
+        },
+        "sha256": {
+          "title": "Sha256",
+          "type": "string"
+        },
+        "extract": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/PackageExtract"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "os",
+        "arch",
+        "url",
+        "sha256"
+      ],
+      "title": "PackageArtifact",
+      "type": "object"
+    },
+    "PackageExtract": {
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "enum": [
+            "tar.gz",
+            "zip"
+          ],
+          "title": "Type",
+          "type": "string"
+        },
+        "path": {
+          "title": "Path",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "path"
+      ],
+      "title": "PackageExtract",
+      "type": "object"
+    },
+    "PackageInstall": {
+      "additionalProperties": false,
+      "properties": {
+        "target": {
+          "enum": [
+            "bin",
+            "packages",
+            "data",
+            "state"
+          ],
+          "title": "Target",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        }
+      },
+      "required": [
+        "target",
+        "name"
+      ],
+      "title": "PackageInstall",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema": {
+      "const": "kori.package.v1",
+      "default": "kori.package.v1",
+      "title": "Schema",
+      "type": "string"
+    },
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "name": {
+      "title": "Name",
+      "type": "string"
+    },
+    "version": {
+      "title": "Version",
+      "type": "string"
+    },
+    "publisher": {
+      "title": "Publisher",
+      "type": "string"
+    },
+    "kind": {
+      "title": "Kind",
+      "type": "string"
+    },
+    "artifacts": {
+      "items": {
+        "$ref": "#/$defs/PackageArtifact"
+      },
+      "title": "Artifacts",
+      "type": "array"
+    },
+    "install": {
+      "$ref": "#/$defs/PackageInstall"
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "version",
+    "publisher",
+    "kind",
+    "artifacts",
+    "install"
+  ],
+  "title": "PackageManifest",
+  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kkori.xyz/schema/v1/package.json"
+}

@@ -1,0 +1,11 @@
+{
+  "schema": "kori.publisher.v1",
+  "id": "kori",
+  "name": "Kori",
+  "description": "Official packages for the Kori daemon.",
+  "website": "https://kkori.xyz",
+  "contact": {
+    "name": "Adam Koricansky",
+    "url": "https://kkori.xyz"
+  }
+}

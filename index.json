@@ -1,0 +1,20 @@
+{
+  "schema": "kori.marketplace.index.v1",
+  "generated_at": "2026-08-26T10:14:31+00:00",
+  "trust": "packages/trust.json",
+  "publishers": [
+    {
+      "id": "kori",
+      "manifest": "packages/kori/publisher.json"
+    }
+  ],
+  "packages": [
+    {
+      "id": "kori.uv",
+      "name": "uv",
+      "publisher": "kori",
+      "latest": "0.12.6",
+      "manifest": "packages/kori/uv/0.12.6/package.json"
+    }
+  ]
+}

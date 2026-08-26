@@ -1,0 +1,14 @@
+{
+  "schema": "kori.trust.v1",
+  "trusted_publishers": ["kori"],
+  "blocked_publishers": [],
+  "blocked_packages": [],
+  "codeowners": [
+    {
+      "path": "packages/kori/**",
+      "owners": ["Adam Koricansky"]
+    }
+  ],
+  "app_verifications": [],
+  "required_hashes": true
+}

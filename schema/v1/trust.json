@@ -1,0 +1,136 @@
+{
+  "$defs": {
+    "AppVerificationRule": {
+      "additionalProperties": false,
+      "properties": {
+        "package": {
+          "title": "Package",
+          "type": "string"
+        },
+        "version": {
+          "title": "Version",
+          "type": "string"
+        },
+        "publisher": {
+          "title": "Publisher",
+          "type": "string"
+        },
+        "artifact_hash": {
+          "title": "Artifact Hash",
+          "type": "string"
+        },
+        "manifest_hash": {
+          "title": "Manifest Hash",
+          "type": "string"
+        },
+        "commit": {
+          "title": "Commit",
+          "type": "string"
+        },
+        "verified": {
+          "default": false,
+          "title": "Verified",
+          "type": "boolean"
+        },
+        "reviewers": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Reviewers",
+          "type": "array"
+        }
+      },
+      "required": [
+        "package",
+        "version",
+        "publisher",
+        "artifact_hash",
+        "manifest_hash",
+        "commit"
+      ],
+      "title": "AppVerificationRule",
+      "type": "object"
+    },
+    "CodeOwnerRule": {
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "title": "Path",
+          "type": "string"
+        },
+        "owners": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Owners",
+          "type": "array"
+        }
+      },
+      "required": [
+        "path",
+        "owners"
+      ],
+      "title": "CodeOwnerRule",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema": {
+      "const": "kori.trust.v1",
+      "default": "kori.trust.v1",
+      "title": "Schema",
+      "type": "string"
+    },
+    "trusted_publishers": {
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "title": "Trusted Publishers",
+      "type": "array"
+    },
+    "blocked_publishers": {
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "title": "Blocked Publishers",
+      "type": "array"
+    },
+    "blocked_packages": {
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "title": "Blocked Packages",
+      "type": "array"
+    },
+    "codeowners": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/CodeOwnerRule"
+      },
+      "title": "Codeowners",
+      "type": "array"
+    },
+    "app_verifications": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/AppVerificationRule"
+      },
+      "title": "App Verifications",
+      "type": "array"
+    },
+    "required_hashes": {
+      "default": true,
+      "title": "Required Hashes",
+      "type": "boolean"
+    }
+  },
+  "title": "TrustManifest",
+  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kkori.xyz/schema/v1/trust.json"
+}

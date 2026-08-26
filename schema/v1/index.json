@@ -1,0 +1,99 @@
+{
+  "$defs": {
+    "PackageIndexEntry": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "name": {
+          "title": "Name",
+          "type": "string"
+        },
+        "publisher": {
+          "title": "Publisher",
+          "type": "string"
+        },
+        "latest": {
+          "title": "Latest",
+          "type": "string"
+        },
+        "manifest": {
+          "title": "Manifest",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "publisher",
+        "latest",
+        "manifest"
+      ],
+      "title": "PackageIndexEntry",
+      "type": "object"
+    },
+    "PublisherIndexEntry": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "manifest": {
+          "title": "Manifest",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "manifest"
+      ],
+      "title": "PublisherIndexEntry",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "schema": {
+      "const": "kori.marketplace.index.v1",
+      "default": "kori.marketplace.index.v1",
+      "title": "Schema",
+      "type": "string"
+    },
+    "generated_at": {
+      "format": "date-time",
+      "title": "Generated At",
+      "type": "string"
+    },
+    "trust": {
+      "default": "packages/trust.json",
+      "title": "Trust",
+      "type": "string"
+    },
+    "publishers": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/PublisherIndexEntry"
+      },
+      "title": "Publishers",
+      "type": "array"
+    },
+    "packages": {
+      "default": [],
+      "items": {
+        "$ref": "#/$defs/PackageIndexEntry"
+      },
+      "title": "Packages",
+      "type": "array"
+    }
+  },
+  "required": [
+    "generated_at"
+  ],
+  "title": "MarketplaceIndex",
+  "type": "object",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://kkori.xyz/schema/v1/index.json"
+}
