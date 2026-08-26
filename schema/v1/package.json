@@ -73,8 +73,7 @@
           "enum": [
             "bin",
             "packages",
-            "data",
-            "state"
+            "data"
           ],
           "title": "Target",
           "type": "string"
