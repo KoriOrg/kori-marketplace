@@ -9,7 +9,7 @@
       "UV_CACHE_DIR": "data/kori.uv/cache",
       "UV_PYTHON_INSTALL_DIR": "data/kori.uv/python",
       "UV_TOOL_DIR": "data/kori.uv/tools",
-      "UV_TOOL_BIN_DIR": "bin",
+      "UV_TOOL_BIN_DIR": "bin/kori/",
       "XDG_CACHE_HOME": "data/kori.uv/xdg-cache",
       "XDG_DATA_HOME": "data/kori.uv/xdg-data",
       "XDG_CONFIG_HOME": "data/kori.uv/xdg-config"
