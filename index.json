@@ -1,6 +1,6 @@
 {
   "schema": "kori.marketplace.index.v1",
-  "generated_at": "2026-08-26T13:45:32+00:00",
+  "generated_at": "2026-08-26T14:03:25+00:00",
   "trust": "packages/trust.json",
   "schemas": [
     {
@@ -31,6 +31,15 @@
     }
   ],
   "packages": [
+    {
+      "id": "kori.greeter",
+      "name": "greeter",
+      "description": "Small multi-file Python greeting package.",
+      "publisher": "kori",
+      "latest": "0.1.0",
+      "manifest": "packages/kori/greeter/0.1.0/package.json",
+      "runtime": "packages/kori/greeter/0.1.0/runtime.json"
+    },
     {
       "id": "kori.hello-world",
       "name": "hello-world",

@@ -46,6 +46,18 @@
       "version": "0.1.0",
       "path": "packages/kori/iso-clock/0.1.0/runtime.json",
       "sha256": "b7563d8b04353ebe51013ddfaa10f716efedd6e7b283f2eb671589d99115bf27"
+    },
+    {
+      "package": "kori.greeter",
+      "version": "0.1.0",
+      "path": "packages/kori/greeter/0.1.0/package.json",
+      "sha256": "9398f862f19e30e4db6d065a7f0b17c76e1fe0607312930ac5a80c9787334000"
+    },
+    {
+      "package": "kori.greeter",
+      "version": "0.1.0",
+      "path": "packages/kori/greeter/0.1.0/runtime.json",
+      "sha256": "3f5830dd0cab91af724bfee0950f190c3dc6f42583eeeef39f035443d7cfd665"
     }
   ],
   "required_hashes": true

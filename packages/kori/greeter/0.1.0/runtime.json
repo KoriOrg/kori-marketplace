@@ -1,0 +1,25 @@
+{
+  "schema": "kori.runtime.v1",
+  "id": "kori.greeter",
+  "version": "0.1.0",
+  "depends": [
+    {
+      "id": "kori.uv",
+      "version": "0.12.6"
+    }
+  ],
+  "exec": {
+    "entrypoint": {
+      "kind": "dependency",
+      "id": "kori.uv"
+    },
+    "args": [
+      "run",
+      "--project",
+      "packages/kori.greeter/0.1.0/greeter",
+      "kori-greeter"
+    ],
+    "env": {},
+    "working_directory": "data/kori.greeter/work"
+  }
+}

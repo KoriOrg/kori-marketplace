@@ -1,0 +1,25 @@
+{
+  "schema": "kori.package.v1",
+  "id": "kori.greeter",
+  "name": "greeter",
+  "description": "Small multi-file Python greeting package.",
+  "version": "0.1.0",
+  "publisher": "kori",
+  "kind": "code",
+  "artifacts": [
+    {
+      "os": "any",
+      "arch": "any",
+      "url": "https://github.com/KoriOrg/kori-packages/releases/download/greeter-v0.1.0/greeter-0.1.0.tar.gz",
+      "sha256": "99ae999cde7e30127996cc012a5a6cff952893781aa08d20492f235bf8a82f1d",
+      "extract": {
+        "type": "tar.gz",
+        "path": "greeter"
+      }
+    }
+  ],
+  "install": {
+    "target": "packages",
+    "name": "greeter"
+  }
+}
